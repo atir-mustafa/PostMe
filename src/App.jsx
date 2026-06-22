@@ -28,8 +28,8 @@ function App() {
       <div className="flex">
         <Sidebar />
 
-        <main className="flex-1">
-          <Outlet />
+        <main className="flex-1 pb-16 md:pb-0">
+            <Outlet />
         </main>
       </div>
 

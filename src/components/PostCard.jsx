@@ -100,11 +100,11 @@ function PostCard({$id, title, featuredImage, authorName}) {
         <div className='w-full h-56 overflow-hidden rounded-xl mb-4'>
           <img src={service.getFileView(featuredImage)} alt={title} className='w-full h-full object-cover' />
         </div>
-        <h2 className='text-xl font-bold text-slate-50 mb-4'>
+        <h2 className='text-lg md:text-xl font-bold text-slate-50 mb-4 line-clamp-2'>
             {title}
         </h2>
 
-        <div className="flex gap-3">
+        <div className="flex flex-wrap gap-3">
             <button
                 onClick={handleLike}
                 className="px-3 py-1 rounded bg-violet-500 hover:bg-violet-600 cursor-pointer duration-500"

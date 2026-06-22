@@ -132,7 +132,7 @@ function EditProfile() {
   }
 
   return (
-    <div className="min-h-screen p-8 flex flex-col items-center">
+    <div className="min-h-screen p-4 md:p-8 flex flex-col items-center">
 
       <div className="flex flex-col items-center">
         <img
@@ -142,7 +142,7 @@ function EditProfile() {
               : `https://ui-avatars.com/api/?name=${profile.authorName}&size=200`
           }
           alt="Profile"
-          className="w-60 h-60 rounded-full object-cover border-4 border-white shadow-lg"
+          className="w-32 h-32 md:w-60 md:h-60 rounded-full object-cover border-4 border-white shadow-lg"
         />
 
         <label className="mt-4 cursor-pointer bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
@@ -159,7 +159,7 @@ function EditProfile() {
         {profile.authorName}
       </h1>
 
-      <div className="w-full max-w-2xl mt-8">
+      <div className="w-full max-w-3xl mt-8">
         <h2 className="text-xl font-semibold mb-2">
           Description
         </h2>
@@ -179,7 +179,7 @@ function EditProfile() {
         </button>
       </div>
 
-      <div className="w-full max-w-2xl mt-10">
+      <div className="w-full max-w-3xl mt-10">
         <h2 className="text-xl font-semibold mb-3">
           Hobbies / Interests / Characteristics
         </h2>
@@ -202,13 +202,13 @@ function EditProfile() {
           ))}
         </div>
 
-        <div className="flex gap-2">
+        <div className="flex w-full max-w-3xl gap-2">
           <input
             type="text"
             value={newTag}
             onChange={(e) => setNewTag(e.target.value)}
             placeholder="Enter tag"
-            className="flex-1 border rounded p-2"
+            className="w-full flex-1 border rounded p-2"
           />
 
           <button

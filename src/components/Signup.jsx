@@ -45,44 +45,46 @@ function Signup() {
         </p>
         {error && <p className='text-red-600 mt-8 text-center'>{error}</p>}
 
-        <form onSubmit={handleSubmit(create)}>
-          <div className='space-y-5'>
-            <Input 
-            label="Name: " 
-            className="inline-block mb-1 pl-1 text-slate-200"
-            placeholder="Enter your name"
-            type="text"
-            {...register("name", {
-              required: true
-            })}
-            />
-            <Input 
-            label="Email: " 
-            className="inline-block mb-1 pl-1 text-slate-200"
-            placeholder="Enter your email"
-            type="email"
-            {...register("email", {
-              required: true,
-              validate: {
-                matchPattern: (value) => /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/.test(value) || "Email address must be a valid address"
-              }
-            })}
-            />
-            <Input 
-            label="Password: " 
-            className="inline-block mb-1 pl-1 text-slate-200"
-            placeholder="Enter your password"
-            type="password"
-            {...register("password", {
-              required: true
-            })}
-            />
-            <Button
-            type='submit'
-            className='w-full bg-violet-500 hover:bg-violet-600 cursor-pointer'
-            >Create Account</Button>
-          </div>
-        </form>
+        <div className="w-full max-w-xl mx-auto">
+          <form onSubmit={handleSubmit(create)}>
+            <div className='space-y-5'>
+              <Input 
+              label="Name: " 
+              className="inline-block mb-1 pl-1 text-slate-200"
+              placeholder="Enter your name"
+              type="text"
+              {...register("name", {
+                required: true
+              })}
+              />
+              <Input 
+              label="Email: " 
+              className="inline-block mb-1 pl-1 text-slate-200"
+              placeholder="Enter your email"
+              type="email"
+              {...register("email", {
+                required: true,
+                validate: {
+                  matchPattern: (value) => /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/.test(value) || "Email address must be a valid address"
+                }
+              })}
+              />
+              <Input 
+              label="Password: " 
+              className="inline-block mb-1 pl-1 text-slate-200"
+              placeholder="Enter your password"
+              type="password"
+              {...register("password", {
+                required: true
+              })}
+              />
+              <Button
+              type='submit'
+              className='w-full bg-violet-500 hover:bg-violet-600 cursor-pointer'
+              >Create Account</Button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   )

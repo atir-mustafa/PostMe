@@ -97,7 +97,8 @@ function Home() {
         <div
           className="
             rounded-3xl
-            p-10
+            p-5
+            md:p-10
             bg-linear-to-r
             from-violet-900
             via-slate-900
@@ -110,7 +111,7 @@ function Home() {
           "
         >
 
-          <h1 className="text-5xl font-bold mb-4">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">
             Welcome,
             <span className="text-violet-400">
               {" "}
@@ -119,7 +120,7 @@ function Home() {
             !
           </h1>
 
-          <p className="text-slate-300 text-lg max-w-3xl">
+          <p className="text-slate-300 text-base md:text-lg max-w-3xl">
             PostMe is a place where people share
             thoughts, stories, ideas and discover
             amazing creators. Explore new profiles,
@@ -127,7 +128,7 @@ function Home() {
             discover content that inspires you.
           </p>
 
-          <div className="flex gap-4 mt-8 flex-wrap">
+          <div className="flex flex-col sm:flex-row gap-4 mt-8">
 
             <button
               onClick={() => navigate("/search")}

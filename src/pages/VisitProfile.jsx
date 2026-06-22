@@ -48,7 +48,7 @@ function VisitProfile() {
     return <div>Loading Profile...</div>;
 
   return (
-    <div className="p-8">
+    <div className="p-4 md:p-8">
 
       <div className="flex flex-col items-center">
 
@@ -62,8 +62,10 @@ function VisitProfile() {
           }
           alt={profile.authorName}
           className="
-            w-60
-            h-60
+            w-32
+            h-32
+            md:w-60
+            md:h-60
             rounded-full
             object-cover
           "
@@ -94,7 +96,7 @@ function VisitProfile() {
         {(posts.length === 0) ? `${profile.authorName} has no posts yet!` : `${profile.authorName}'s Posts :`}
       </h2>
 
-      <div className="flex flex-wrap gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {posts.map((post) => (
           <PostCard
             key={post.$id}

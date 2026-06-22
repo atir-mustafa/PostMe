@@ -31,15 +31,49 @@ function Sidebar() {
   ];
 
   return (
-    <aside className="w-64 min-h-96 bg-slate-900 border-r border-slate-700 p-4">
+    <aside
+      className="
+        fixed
+        bottom-0
+        left-0
+        right-0
+        z-50
 
-      <div className="flex flex-col gap-2">
+        md:static
+
+        bg-slate-900
+        border-t
+        md:border-t-0
+        md:border-r
+        border-slate-700
+
+        p-2
+        md:p-4
+
+        w-full
+        md:w-64
+      "
+    >
+
+      <div
+        className="
+          flex
+          justify-around
+
+          md:flex-col
+          md:justify-start
+
+          gap-1
+          md:gap-2
+        "
+      >
         {menuItems.map((item) => (
           <NavLink
             key={item.name}
             to={item.path}
             className={({ isActive }) =>
-              `px-4 py-3 rounded-lg transition ${
+              `px-2 md:px-4 py-2 md:py-3 text-xs md:text-base text-center rounded-lg transition 
+              ${
                 isActive
                   ? "bg-violet-600 text-white"
                   : "hover:bg-slate-700"

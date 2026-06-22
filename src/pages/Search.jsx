@@ -86,8 +86,14 @@ function Search() {
               key={profile.$id}
               className="
                 flex
-                items-center
-                justify-between
+                flex-col
+                md:flex-row
+
+                gap-4
+
+                md:items-center
+                md:justify-between
+
                 bg-slate-800
                 p-4
                 rounded-xl

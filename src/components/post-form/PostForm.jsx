@@ -74,53 +74,55 @@ export default function PostForm({ post }) {
     }, [watch, slugTransform, setValue]);
 
     return (
-        <form onSubmit={handleSubmit(submit)} className="flex flex-wrap">
-            <div className="w-2/3 px-2">
-                <Input
-                    label="Title :"
-                    placeholder="Title (36 characters at most)"
-                    className="mb-4"
-                    {...register("title", { required: true })}
-                />
-                <Input
-                    label="Slug :"
-                    placeholder="Slug"
-                    className="mb-4"
-                    readOnly
-                    {...register("slug", { required: true })}
-                    onInput={(e) => {
-                        setValue("slug", slugTransform(e.currentTarget.value), { shouldValidate: true });
-                    }}
-                />
-                <RTE label="Content :" name="content" control={control} defaultValue={getValues("content")} />
-            </div>
-            <div className="w-1/3 px-2">
-                <Input
-                    label="Featured Image :"
-                    type="file"
-                    className="mb-4"
-                    accept="image/png, image/jpg, image/jpeg, image/gif"
-                    {...register("image", { required: !post })}
-                />
-                {post && (
-                    <div className="w-full mb-4">
-                        <img
-                            src={service.getFileView(post.featuredImage)}
-                            alt={post.title}
-                            className="rounded-lg"
-                        />
-                    </div>
-                )}
-                <Select
-                    options={["active", "inactive"]}
-                    label="Status"
-                    className="mb-4"
-                    {...register("status", { required: true })}
-                />
-                <Button type="submit" bgColor={post ? "bg-green-500" : "bg-violet-500"} className="w-full mt-4 cursor-pointer">
-                    {post ? <><FontAwesomeIcon icon={faArrowsRotate} /> Update</> : <><FontAwesomeIcon icon={faFileArrowDown} /> Submit</>}
-                </Button>
-            </div>
-        </form>
+        <div className="w-full max-w-4xl mx-auto">
+            <form onSubmit={handleSubmit(submit)} className="flex flex-col md:flex-row">
+                <div className="w-full md:w-2/3 px-2 min-w-0">
+                    <Input
+                        label="Title :"
+                        placeholder="Title (36 characters at most)"
+                        className="mb-4"
+                        {...register("title", { required: true })}
+                    />
+                    <Input
+                        label="Slug :"
+                        placeholder="Slug"
+                        className="mb-4"
+                        readOnly
+                        {...register("slug", { required: true })}
+                        onInput={(e) => {
+                            setValue("slug", slugTransform(e.currentTarget.value), { shouldValidate: true });
+                        }}
+                    />
+                    <RTE label="Content :" name="content" control={control} defaultValue={getValues("content")} />
+                </div>
+                <div className="w-full md:w-1/3 px-2 mt-4 md:mt-0 min-w-0">
+                    <Input
+                        label="Featured Image :"
+                        type="file"
+                        className="mb-4"
+                        accept="image/png, image/jpg, image/jpeg, image/gif"
+                        {...register("image", { required: !post })}
+                    />
+                    {post && (
+                        <div className="w-full mb-4">
+                            <img
+                                src={service.getFileView(post.featuredImage)}
+                                alt={post.title}
+                                className="rounded-lg"
+                            />
+                        </div>
+                    )}
+                    <Select
+                        options={["active", "inactive"]}
+                        label="Status"
+                        className="mb-4"
+                        {...register("status", { required: true })}
+                    />
+                    <Button type="submit" bgColor={post ? "bg-green-500" : "bg-violet-500"} className="w-full mt-4 cursor-pointer">
+                        {post ? <><FontAwesomeIcon icon={faArrowsRotate} /> Update</> : <><FontAwesomeIcon icon={faFileArrowDown} /> Submit</>}
+                    </Button>
+                </div>
+            </form>
+        </div>
     );
 }

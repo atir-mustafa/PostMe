@@ -1,16 +1,148 @@
-# React + Vite
+# 🚀 PostMe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+PostMe is a modern social media platform built with React, Appwrite, Redux Toolkit, and Tailwind CSS. It allows users to create accounts, share posts, discover content from other users, interact with profiles, and explore a dynamic social environment.
 
-Currently, two official plugins are available:
+🌐 **Live Website:**  
+https://post-me-1lb5.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📖 About The Project
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+PostMe was created to simulate the core experience of a modern social platform while focusing on clean UI design, authentication, profile management, and content sharing.
 
-## Expanding the ESLint configuration
+Users can:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Create an account and securely log in.
+- Customize their profile.
+- Create, edit, and delete posts.
+- Upload images with posts.
+- Explore posts from other users.
+- Like and save interesting content.
+- Visit user profiles.
+- Search for users.
+- Discover new creators through the home page recommendations.
+
+The platform is designed to feel active and engaging even for new users by showcasing recommended profiles and interesting posts.
+
+---
+
+## ✨ Features
+
+### 🔐 Authentication
+- User Signup
+- User Login
+- Secure Session Management
+- Protected Routes
+
+### 👤 User Profiles
+- Profile Creation
+- Profile Picture Upload
+- Custom User Descriptions
+- Public Profile Pages
+
+### 📝 Post Management
+- Create Posts
+- Edit Posts
+- Delete Posts
+- Rich Text Editor Support
+- Image Upload Support
+
+### ❤️ User Interaction
+- Like Posts
+- Save Posts
+- View Liked Posts
+- Explore User Content
+
+### 🔎 Discovery
+- Search Users
+- Explore Recommended Profiles
+- Discover Trending Content
+- Browse All Posts
+
+### 🎨 UI & UX
+- Modern Dark Theme
+- Responsive Layout (In Progress)
+- Smooth Navigation
+- Interactive Components
+
+---
+
+## 🛠️ Built With
+
+### Frontend
+- React.js
+- React Router DOM
+- Redux Toolkit
+- Tailwind CSS
+
+### Backend & Services
+- Appwrite
+
+### Deployment
+- Vercel
+
+---
+
+## 📂 Project Structure
+
+```bash
+src/
+│
+├── appwrite/
+├── components/
+├── pages/
+├── store/
+├── conf/
+├── routes/
+└── assets/
+```
+
+---
+
+## 🎯 Purpose
+
+The purpose of PostMe is to demonstrate the development of a full-stack social media application using modern web technologies.
+
+This project showcases:
+
+- Authentication Systems
+- State Management with Redux
+- Backend Integration using Appwrite
+- File Upload Handling
+- Dynamic User Interfaces
+- CRUD Operations
+- Client-side Routing
+- Deployment Workflow
+
+---
+
+## 🚀 Future Improvements
+
+- Fully Responsive Design
+- Follow / Unfollow System
+- Notifications
+- Comment System
+- Real-Time Messaging
+- Dark / Light Theme Toggle
+- Trending Posts Section
+- Enhanced User Recommendations
+
+---
+
+## 👨‍💻 Developer
+
+**Atir Mustafa**
+
+Computer Engineering Graduate passionate about Frontend Development, UI Design, and building modern web applications.
+
+GitHub:
+https://github.com/atir-mustafa
+
+---
+
+## ⭐ Support
+
+If you find this project interesting, consider giving the repository a star ⭐
+
+It helps support the project and motivates future improvements.

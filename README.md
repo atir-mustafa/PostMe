@@ -62,7 +62,7 @@ The platform is designed to feel active and engaging even for new users by showc
 
 ### 🎨 UI & UX
 - Modern Dark Theme
-- Responsive Layout (In Progress)
+- Responsive Layout
 - Smooth Navigation
 - Interactive Components
 
@@ -119,7 +119,6 @@ This project showcases:
 
 ## 🚀 Future Improvements
 
-- Fully Responsive Design
 - Follow / Unfollow System
 - Notifications
 - Comment System

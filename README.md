@@ -1,6 +1,6 @@
 # 🚀 PostMe
 
-PostMe is a modern social media platform built with React, Appwrite, Redux Toolkit, and Tailwind CSS. It allows users to create accounts, share posts, discover content from other users, interact with profiles, and explore a dynamic social environment.
+PostMe is a modern responsive social media platform built with React, Appwrite, Redux Toolkit, and Tailwind CSS. It allows users to create accounts, share posts, discover content from other users, interact with profiles, and explore a dynamic social environment.
 
 🌐 **Live Website:**  
 https://post-me-1lb5.vercel.app

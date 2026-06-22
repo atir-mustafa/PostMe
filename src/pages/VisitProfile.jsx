@@ -68,6 +68,10 @@ function VisitProfile() {
             md:h-60
             rounded-full
             object-cover
+            border-4 
+            border-white 
+            shadow-lg
+            shadow-violet-800
           "
         />
 

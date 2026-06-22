@@ -60,7 +60,7 @@ function Profile() {
             : `https://ui-avatars.com/api/?name=${profile.authorName}&size=200`
         }
         alt="Profile"
-        className="w-60 h-60 rounded-full object-cover border-4 border-white shadow-lg"
+        className="w-32 h-32 md:w-60 md:h-60 rounded-full object-cover border-4 border-white shadow-lg shadow-violet-800"
       />
 
       <h1 className="text-3xl font-bold mt-5">

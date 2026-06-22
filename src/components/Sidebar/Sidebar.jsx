@@ -34,6 +34,7 @@ function Sidebar() {
     <aside
       className="
         fixed
+        h-15
         bottom-0
         left-0
         right-0
